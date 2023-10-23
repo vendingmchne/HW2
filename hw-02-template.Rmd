@@ -46,12 +46,15 @@ _Write your text to answer exercise 1b here (Please delete this message before s
 ## Exercise 2
 
 ```{r ex2, out.width = "80%"}
-# Write your code to answer exercise 2 here
+# Write your code to answer exercise 2a here
 
 
 
 
 ```
+
+_Write your text to answer exercise 2b here (Please delete this message before submission!)_
+
 
 
 
