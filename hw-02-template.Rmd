@@ -9,10 +9,104 @@ output: html_document
 ## **DO NOT EDIT THIS CODE CHUNK**
 knitr::opts_chunk$set(echo = TRUE)
 
+#run install.packages("cherryblossom") on the console to get the run17 dataset
+
 library(tidyverse)
+library(cherryblossom)  
 ```
 
 
-## Warning!
 
-The homework assignment is yet to be released. Further information about the assignments can be found on the [course website](https://uoe-ids.netlify.app/assessments/homework/), including release dates.
+## Exercise 1
+
+```{r ex1a, out.width="80%"}
+run17 %>%
+  filter(event == "10 Mile") %>%
+  ggplot(mapping = aes(x = age)) +
+    geom_histogram(binwidth = 2)
+```
+
+
+_Write your text to answer exercise 1a here (Please delete this message before submission!)_
+
+
+```{r ex1b, out.width="80%"}
+# Write your code for Ex1b here
+
+
+
+
+
+```
+
+
+_Write your text to answer exercise 1b here (Please delete this message before submission!)_
+
+
+## Exercise 2
+
+```{r ex2, out.width = "80%"}
+# Write your code to answer exercise 2 here
+
+
+
+
+```
+
+
+
+## Exercise 3
+
+```{r ex3, out.width = "80%"}
+# Write your code to answer exercise 3 here
+
+
+
+
+
+```
+
+
+
+
+
+## Exercise 4
+
+#### Example of a good data visualisation
+
+```{r ex4_good_viz, echo = FALSE, out.width = "80%"}
+# edit the file path accordingly
+knitr::include_graphics("img/good_viz.png")
+```
+
+_Edit the text below by replacing the bold text with the appropriate information to provide a reference for your image (Please delete this message before submission!)_
+
+**Author/Organisation**, "**Title of website**" [Online]. Available at: **URL** (Accessed: **day month year**)
+
+
+The above image presents a good data visualisation because:
+
+-   _Reason 1_
+-   _Reason 2_
+
+
+#### Example of a bad data visualisation
+
+
+```{r ex4_bad_viz, echo = FALSE, out.width = "80%"}
+# edit the file path accordingly
+knitr::include_graphics("img/bad_viz.png")
+```
+
+_Edit the text below by replacing the bold text with the appropriate information to provide a reference for your image (Please delete this message before submission!)_
+
+**Author/Organisation**, "**Title of website**" [Online]. Available at: **URL** (Accessed: **day month year**)
+
+
+
+The above image presents a bad data visualisation because:
+
+-   _Reason 1_
+-   _Reason 2_
+
+
