@@ -53,12 +53,13 @@ This histogram, similarly to the 10 Mile race, is also positively skewed. This a
 ```{r ex2, out.width = "80%"}
 # Write your code to answer exercise 2a here
 
-
+boxplotdata <- run17 %>% mutate(net_min = net_sec/60) %>% select(event, sex, net_min)
+ggplot(boxplotdata) + geom_boxplot(mapping = aes(y = net_min)) + labs(title = "Box-whisker plots of the net times of contestants in the Cherryblossom races", y = "Time (minutes)") + facet_grid(event ~ sex, scale = "free")
 
 
 ```
 
-_Write your text to answer exercise 2b here (Please delete this message before submission!)_
+The above data demonstrates the median, lower and upper quartile, and outliers for 4 separate sets of data, sorted by the event ran by competitors and the sex of the competitors. As can be seen, the mean time for the M sex is lower than that of the F sex in both the 5K races and 10 Mile races. In addition, the mean time for the 5K is significantly lower than in the 10 Mile for both categorised sexes due to the shorter distance.  
 
 
 
@@ -68,7 +69,7 @@ _Write your text to answer exercise 2b here (Please delete this message before s
 ```{r ex3, out.width = "80%"}
 # Write your code to answer exercise 3 here
 
-
+run17firstlastwave <- run17 %>% filter(clock_sec - net_sec <= 180 | clock_sec - net_sec >= 1380)
 
 
 
