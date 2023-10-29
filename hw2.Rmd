@@ -24,23 +24,28 @@ run17 %>%
   filter(event == "10 Mile") %>%
   ggplot(mapping = aes(x = age)) +
     geom_histogram(binwidth = 2)
+
+run17ages10m <- run17 %>% filter(event == "10 Mile") %>% select(age) %>% na.omit() %>% unlist()
+mean(run17ages10m)
+median(run17ages10m)
 ```
 
 
-_Write your text to answer exercise 1a here (Please delete this message before submission!)_
-
+The histogram is skewed positively (to the right). It suggests that the oldest runners, i.e the outliers, are further away from the mean (i.e older) than the youngest runners are. The mean value of the variable age in this dataset is 37 rounded to the nearest year. The median runner is 35 years old, and from the histogram the modal classes are 26-28 and 28-30. As the mean and median runner are both older than this, these statistics support the shape of the histogram. 
 
 ```{r ex1b, out.width="80%"}
 # Write your code for Ex1b here
 
 
+run17 %>% filter(event == "5K") %>% ggplot(mapping = aes(x = age)) + geom_histogram(binwidth = 2)
 
-
-
+run17ages5k <- run17 %>% filter(event == "5K") %>% select(age) %>% na.omit() %>% unlist()
+mean(run17ages5k)
+median(run17ages5k)
 ```
 
 
-_Write your text to answer exercise 1b here (Please delete this message before submission!)_
+This histogram, similarly to the 10 Mile race, is also positively skewed. This also suggests that the outliers right of the mean (older runners) are further from the mean than the outliers left of the mean (younger runners). The mean running age to the nearest year is 37, and a median of 36, which is also very similar to the mean and median ages of the 10 Mile runners. A possible difference is that with 5k being a shorter distance may make it easier for older runners to complete. A further comment to add is that there is a clear decrease in frequency as age increases with the 10 mile runners, and while there is a decrease with the 5k runners, the decrease is more random and jagged. 
 
 
 ## Exercise 2
